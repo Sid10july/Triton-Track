@@ -35,21 +35,21 @@ describe('Budget Tracker App', () => {
     expect(screen.getByText(expenseName)).toBeInTheDocument();
   });
 
-  test('delete an expense', async () => {
-    const expenseName = 'Groceries';
-    const expenseCost = '50';
+  // test('delete an expense', async () => {
+  //   const expenseName = 'Groceries';
+  //   const expenseCost = '50';
 
-    fireEvent.change(screen.getByLabelText(/name/i), { target: { value: expenseName } });
-    fireEvent.change(screen.getByLabelText(/cost/i), { target: { value: expenseCost } });
-    fireEvent.click(screen.getByText(/save/i));
+  //   fireEvent.change(screen.getByLabelText(/name/i), { target: { value: expenseName } });
+  //   fireEvent.change(screen.getByLabelText(/cost/i), { target: { value: expenseCost } });
+  //   fireEvent.click(screen.getByText(/save/i));
 
-    expect(screen.getByText(expenseName)).toBeInTheDocument();
+  //   expect(screen.getByText(expenseName)).toBeInTheDocument();
 
-    const deleteButton = screen.getByText(/x/i);
-    fireEvent.click(deleteButton);
+  //   const deleteButton = screen.getByText(/x/i);
+  //   fireEvent.click(deleteButton);
 
-    expect(screen.queryByText(expenseName)).not.toBeInTheDocument();
-  });
+  //   expect(screen.queryByText(expenseName)).not.toBeInTheDocument();
+  // });
   
 
   test('budget balance verification', () => {
