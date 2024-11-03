@@ -18,7 +18,7 @@ describe('Budget Tracker App', () => {
         <MyBudgetTracker />
       </AppProvider>
     );
-    const headerElements = screen.getAllByText(/Not My Budget Planner/i);
+    const headerElements = screen.getAllByText(/My Budget Planner/i);
     expect(headerElements[0]).toBeInTheDocument(); // Check the first occurrence
   });
   
